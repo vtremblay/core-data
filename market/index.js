@@ -8,7 +8,7 @@ var database = 'cmr';
 var collection = 'MARKET';
 
 service.init(function () {
-  service.get('/', function (req, res) {
+  service.get('/markets', function (req, res) {
     var mongo = new soajs.mongo(req.soajs.registry.coreDB[ database ]);
 
     mongo.find(collection, {}, {}, function (err, data) {
@@ -16,7 +16,7 @@ service.init(function () {
     });
   });
 
-  service.post('/', function (req, res) {
+  service.post('/markets', function (req, res) {
     var mongo = new soajs.mongo(req.soajs.registry.coreDB[ database ]);
 
     mongo.insert(collection, req.soajs.inputmaskData.data, function (err, data) {

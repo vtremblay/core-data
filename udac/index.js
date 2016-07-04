@@ -8,7 +8,7 @@ var database = 'cmr';
 var collection = 'UDAC';
 
 service.init(function () {
-  service.get('/', function (req, res) {
+  service.get('/udacs', function (req, res) {
     var mongo = new soajs.mongo(req.soajs.registry.coreDB[ database ]);
 
     var query = {};
@@ -21,7 +21,7 @@ service.init(function () {
     });
   });
 
-  service.post('/', function (req, res) {
+  service.post('/udacs', function (req, res) {
     var mongo = new soajs.mongo(req.soajs.registry.coreDB[ database ]);
 
     mongo.insert(collection, req.soajs.inputmaskData.data, function (err, data) {

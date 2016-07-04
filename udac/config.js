@@ -16,7 +16,7 @@ module.exports = {
   'errors': {},
   'schema': {
     'get': {
-      '/': {
+      '/udacs': {
         '_apiInfo': {
           'l': 'Search UDACs',
           'group': 'Basic',
@@ -35,7 +35,7 @@ module.exports = {
       }
     },
     'post': {
-      '/': {
+      '/udacs': {
         '_apiInfo': {
           'l': 'Add UDAC',
           'group': 'Basic',

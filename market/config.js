@@ -16,7 +16,7 @@ module.exports = {
   'errors': {},
   'schema': {
     'get': {
-      '/': {
+      '/markets': {
         '_apiInfo': {
           'l': 'Search Markets',
           'group': 'Basic',
@@ -25,7 +25,7 @@ module.exports = {
       }
     },
     'post': {
-      '/': {
+      '/markets': {
         '_apiInfo': {
           'l': 'Add Market',
           'group': 'Basic',

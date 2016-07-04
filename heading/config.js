@@ -16,7 +16,7 @@ module.exports = {
   'errors': {},
   'schema': {
     'get': {
-      '/': {
+      '/headings': {
         '_apiInfo': {
           'l': 'Search Headings',
           'group': 'Basic',
@@ -25,7 +25,7 @@ module.exports = {
       }
     },
     'post': {
-      '/': {
+      '/headings': {
         '_apiInfo': {
           'l': 'Add Heading',
           'group': 'Basic',

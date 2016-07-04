@@ -3,8 +3,8 @@
 module.exports = {
   'type': 'multi',
   'folders': [
-    'udac/',
-    'heading/',
-    'market/'
+    '/udac',
+    '/heading',
+    '/market'
   ]
 };

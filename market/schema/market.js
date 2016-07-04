@@ -3,7 +3,7 @@ module.exports = {
     'type': 'string',
     'required': true
   },
-  'description': {
+  'name': {
     'type': 'object',
     'properties': {
       'fr': { 'type': 'string' },

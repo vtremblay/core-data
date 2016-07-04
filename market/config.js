@@ -11,7 +11,7 @@ module.exports = {
   serviceName: 'market',
   serviceGroup: 'Markets services',
   serviceVersion: 1,
-  servicePort: 4030,
+  servicePort: 4101,
   extKeyRequired: false,
   'errors': {},
   'schema': {

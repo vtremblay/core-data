@@ -11,7 +11,7 @@ module.exports = {
   serviceName: 'udac',
   serviceGroup: 'UDACs services',
   serviceVersion: 1,
-  servicePort: 4030,
+  servicePort: 4102,
   extKeyRequired: false,
   'errors': {},
   'schema': {

@@ -13,19 +13,19 @@ var udacRoutes = require('./udac/udac.routes');
 service.init(function () {
 
   async.parallel([
-    function(next) {
+    function (next) {
       headingRoutes.init(service);
       next(null);
     },
-    function(next) {
+    function (next) {
       marketRoutes.init(service);
       next(null);
     },
-      function(next) {
-        udacRoutes.init(service);
-        next(null);
-      }
-  ], function() {
+    function (next) {
+      udacRoutes.init(service);
+      next(null);
+    }
+  ], function () {
     service.start();
   });
 });

@@ -15,7 +15,7 @@ module.exports = {
   extKeyRequired: false,
   'errors': {},
   'schema': {
-    'get': {
+    // 'get': {
       '/markets': {
         '_apiInfo': {
           'l': 'Search Markets',
@@ -23,23 +23,23 @@ module.exports = {
           'groupMain': true
         }
       }
-    },
-    'post': {
-      '/markets': {
-        '_apiInfo': {
-          'l': 'Add Market',
-          'group': 'Basic',
-          'groupMain': true
-        },
-        'data': {
-          'required': true,
-          'source': [ 'body.data' ],
-          'validation': {
-            'type': 'object',
-            'properties': market
-          }
-        }
-      }
-    }
+    // },
+    // 'post': {
+    //   '/markets': {
+    //     '_apiInfo': {
+    //       'l': 'Add Market',
+    //       'group': 'Basic',
+    //       'groupMain': true
+    //     },
+    //     'data': {
+    //       'required': true,
+    //       'source': [ 'body.data' ],
+    //       'validation': {
+    //         'type': 'object',
+    //         'properties': market
+    //       }
+    //     }
+    //   }
+    // }
   }
 };

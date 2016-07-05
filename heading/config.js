@@ -15,7 +15,7 @@ module.exports = {
   extKeyRequired: false,
   'errors': {},
   'schema': {
-    'get': {
+    // 'get': {
       '/headings': {
         '_apiInfo': {
           'l': 'Search Headings',
@@ -23,23 +23,23 @@ module.exports = {
           'groupMain': true
         }
       }
-    },
-    'post': {
-      '/headings': {
-        '_apiInfo': {
-          'l': 'Add Heading',
-          'group': 'Basic',
-          'groupMain': true
-        },
-        'data': {
-          'required': true,
-          'source': [ 'body.data' ],
-          'validation': {
-            'type': 'object',
-            'properties': heading
-          }
-        }
-      }
-    }
+    // },
+    // 'post': {
+    //   '/headings': {
+    //     '_apiInfo': {
+    //       'l': 'Add Heading',
+    //       'group': 'Basic',
+    //       'groupMain': true
+    //     },
+    //     'data': {
+    //       'required': true,
+    //       'source': [ 'body.data' ],
+    //       'validation': {
+    //         'type': 'object',
+    //         'properties': heading
+    //       }
+    //     }
+    //   }
+    // }
   }
 };

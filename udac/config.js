@@ -15,7 +15,7 @@ module.exports = {
   extKeyRequired: false,
   'errors': {},
   'schema': {
-    'get': {
+    // 'get': {
       '/udacs': {
         '_apiInfo': {
           'l': 'Search UDACs',
@@ -33,23 +33,23 @@ module.exports = {
           }
         }
       }
-    },
-    'post': {
-      '/udacs': {
-        '_apiInfo': {
-          'l': 'Add UDAC',
-          'group': 'Basic',
-          'groupMain': true
-        },
-        'data': {
-          'required': true,
-          'source': [ 'body.data' ],
-          'validation': {
-            'type': 'object',
-            'properties': udac
-          }
-        }
-      }
-    }
+    // },
+    // 'post': {
+    //   '/udacs': {
+    //     '_apiInfo': {
+    //       'l': 'Add UDAC',
+    //       'group': 'Basic',
+    //       'groupMain': true
+    //     },
+    //     'data': {
+    //       'required': true,
+    //       'source': [ 'body.data' ],
+    //       'validation': {
+    //         'type': 'object',
+    //         'properties': udac
+    //       }
+    //     }
+    //   }
+    // }
   }
 };

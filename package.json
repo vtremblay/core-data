@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/vtremblay/core-data#readme",
   "dependencies": {
+    "async": "^1.5.2",
+    "merge": "^1.2.0",
     "mongodb": "^2.1.18",
     "soajs": "git://github.com/soajs/soajs.git#develop"
   }

@@ -4,7 +4,7 @@ var headingConfig = require('./heading/config');
 var marketConfig = require('./market/config');
 var udacConfig = require('./udac/config');
 
-var merger = require('./utils/merger');
+var merge = require('merge');
 
 module.exports = {
   type: 'service',
@@ -18,7 +18,7 @@ module.exports = {
   servicePort: 4100,
   extKeyRequired: false,
   'errors': {},
-  'schema': merger.merge({}, headingConfig, marketConfig, udacConfig)
+  'schema': merge.recursive(true, headingConfig, marketConfig, udacConfig)
 };
 
 

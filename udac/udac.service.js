@@ -1,27 +1,29 @@
 'use strict';
 
 var soajs = require('soajs');
-var config = require('./config.js');
-var service = new soajs.server.service(config);
 
 var database = 'cmr';
-var collection = 'HEADING';
+var collection = 'UDAC';
 
-service.init(function () {
-  service.get('/headings', function (req, res) {
+module.exports = {
+  get: function (req, res) {
     var mongo = new soajs.mongo(req.soajs.registry.coreDB[ database ]);
 
-    mongo.find(collection, {}, {}, function (err, data) {
+    var query = {};
+    if (req.soajs.inputmaskData.type) {
+      query = { 'type': { '$in': req.soajs.inputmaskData.type } };
+    }
+
+    mongo.find(collection, query, {}, function (err, data) {
       res.json(req.soajs.buildResponse(null, data));
     });
-  });
+  },
 
-  service.post('/headings', function (req, res) {
+  post: function (req, res) {
     var mongo = new soajs.mongo(req.soajs.registry.coreDB[ database ]);
 
     mongo.insert(collection, req.soajs.inputmaskData.data, function (err, data) {
       res.json(req.soajs.buildResponse(null, data));
     });
-  });
-  service.start();
-});
+  }
+};

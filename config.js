@@ -18,7 +18,7 @@ module.exports = {
   servicePort: 4100,
   extKeyRequired: false,
   'errors': {},
-  'schema': merge.recursive(true, headingConfig, marketConfig, udacConfig)
+  'schema': {}
 };
 
 
